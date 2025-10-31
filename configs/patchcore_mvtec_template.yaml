@@ -1,0 +1,31 @@
+
+dataset:
+  name: mvtec
+  format: mvtec
+  path: {data_path}
+  category: {category}
+  image_size: 256
+  train_batch_size: 32
+  test_batch_size: 32
+  num_workers: 8
+
+model:
+  name: patchcore
+  backbone: wide_resnet50_2
+  layers:
+    - layer2
+    - layer3
+  coreset_sampling_ratio: 0.1
+  num_neighbors: 9
+
+metrics:
+  image:
+    - AUROC
+  pixel:
+    - AUROC
+  threshold:
+    method: adaptive
+
+project:
+  seed: 42
+  path: {results_dir}

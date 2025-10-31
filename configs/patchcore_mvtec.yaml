@@ -1,0 +1,28 @@
+model:
+  name: patchcore
+  backbone: wide_resnet50_2
+  layers:
+    - layer2
+    - layer3
+  coreset_sampling_ratio: 0.1
+  num_neighbors: 9
+
+data:
+  name: mvtec
+  root: D:/scr/journal2/datasets/mvtec
+  category: bottle
+  image_size: 256
+  train_batch_size: 32
+  eval_batch_size: 32
+  num_workers: 8
+
+trainer:
+  max_epochs: 1
+  accelerator: gpu
+  devices: [0]
+  logger: true
+  enable_checkpointing: true
+
+project:
+  seed: 42
+  default_root_dir: D:/scr/journal2/results

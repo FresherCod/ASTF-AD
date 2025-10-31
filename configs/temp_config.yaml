@@ -1,0 +1,39 @@
+
+data:
+  class_path: anomalib.data.MVTec
+  init_args:
+    root: 'D:\scr\journal2\datasets\mvtec'
+    category: wood
+    image_size: 256
+    train_batch_size: 32
+    eval_batch_size: 32
+    num_workers: 8
+
+model:
+  class_path: anomalib.models.Patchcore
+  init_args:
+    layers:
+      - layer2
+      - layer3
+    backbone: wide_resnet50_2
+    coreset_sampling_ratio: 0.1
+    num_neighbors: 9
+
+trainer:
+  accelerator: auto # Tự động chọn GPU nếu có, không thì CPU
+  devices: 1
+  max_epochs: 1 # Patchcore không cần training, nên 1 epoch là đủ để fit coreset
+  
+metrics:
+  image:
+    - AUROC
+  pixel:
+    - AUROC
+
+project:
+  seed: 42
+  path: 'D:\scr\journal2\results'
+
+# Logging, callbacks... có thể thêm ở đây nếu cần
+# logging:
+#   logger: tensorboard

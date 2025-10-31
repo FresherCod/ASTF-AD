@@ -1,0 +1,26 @@
+# Core ML/DL Frameworks
+torch>=2.0.0
+torchvision>=0.15.0
+# Lưu ý: Phiên bản torch và torchvision cần tương thích với CUDA trên máy của bạn
+
+# Anomalib - The core library for the baseline
+anomalib>=1.0.0
+
+# Foundation Model & Helpers
+timm>=1.0.0
+# DINOv2 được tải qua torch.hub nên không cần cài đặt riêng
+
+# Data Handling and Scientific Computing
+numpy==1.24.3
+pandas
+scikit-learn
+scipy
+Pillow
+
+# Command-line Interface and Visualization
+rich
+matplotlib
+tabulate
+
+# Utilities
+tqdm

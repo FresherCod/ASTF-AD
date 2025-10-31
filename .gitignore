@@ -1,0 +1,30 @@
+# Python cache & virtual environment
+__pycache__/
+*.pyc
+venv/
+.env*
+
+# IDE and OS files
+.vscode/
+.idea/
+.DS_Store
+
+# LARGE FILES AND DIRECTORIES - Stored externally
+# ----------------------------------------------------
+# Bỏ qua toàn bộ thư mục dữ liệu
+/data/
+
+# Bỏ qua toàn bộ thư mục models (checkpoints, adapters)
+/models/
+
+# Bỏ qua toàn bộ thư mục kết quả (CSV, visuals)
+/results/
+
+# Bỏ qua các file nén
+*.zip
+# ----------------------------------------------------
+
+# Personal research notes
+*.docx
+*.pptx
+notes/
