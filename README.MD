@@ -115,25 +115,28 @@ The experiments are organized sequentially. To reproduce our findings, please ru
 ### **Step 2 — Train Adapter Modules**
 This script checks for existing adapter weights in `models/adapters/` and only trains the missing ones. If you downloaded our models, this step will be skipped automatically.
 
-python src/02_train_adapters.py
+```bash
+python src/02_train_adapters.py```
+
 Output: Trained adapter weights (.pth files) for all 15 categories are ensured to be in models/adapters/.
-Step 3 — Evaluate the Final ASTF-AD System
+### **Step 3 — Evaluate the Final ASTF-AD System**
 This is the main evaluation script. It applies our "Expert Selection Strategy" for each category and compares the final performance against the baseline.
-code
-Bash
-python src/03_evaluate_system.py
+
+```bash
+python src/03_evaluate_system.py```
 Output: The comprehensive comparison table is printed to the console and saved to results/final_benchmark_comparison.csv.
-Step 4 — Generate Visual Comparisons (Optional)
+
+### **Step 4 — Generate Visual Comparisons (Optional)**
 To generate visual comparisons for specific images:
 Open src/04_generate_visuals.py.
 Edit the images_to_visualize dictionary inside the script to select your target images.
 Run the script:
-
+``` bash
 python src/04_generate_visuals.py
-
+```
 Output: Comparison images will be saved in results/visuals/.
 
-📊 Key Results
+## 📊 Key Results
 Category	Applied Strategy	Image AUROC (ASTF-AD)	Baseline Image AUROC	Pixel AUROC (ASTF-AD)	Baseline Pixel AUROC
 carpet	semantic_adapter	0.9988	0.7006	0.9831	0.9545
 leather	semantic_adapter	1.0000	0.8893	0.9831	0.9791
@@ -142,7 +145,7 @@ screw	fusion_weighted_sum_0.7	0.6581	0.7950	0.9872	0.9873
 Average	-	0.8669	0.9233	0.9372	0.9631
 Note: While the overall average performance is comparable to the baseline, the key insight is the system's ability to achieve state-of-the-art results on specific, challenging data types (e.g., carpet, leather) where the baseline is known to perform poorly, demonstrating superior adaptability.
 
-💡 Future Work
+## 💡 Future Work
 This research opens up several promising avenues for future work:
 
 Automated Strategy Selection: Replace the static STRATEGY_MAP with a learnable meta-model (e.g., an ML Filter) to predict the optimal strategy for unseen product types.
@@ -152,7 +155,7 @@ AI Arbiter: Develop a meta-model that infers the best strategy from a small batc
 Learnable Fusion Module: Explore neural fusion architectures (e.g., a FusionNet) for pixel-wise adaptive combination of anomaly maps.
 
 
-📚 Citation
+## 📚 Citation
 If you use ASTF-AD in your research, please cite:
 
 @article{truong2025astfad,
