@@ -116,7 +116,8 @@ The experiments are organized sequentially. To reproduce our findings, please ru
 **This script checks for existing adapter weights in `models/adapters/` and only trains the missing ones. If you downloaded our models, this step will be skipped automatically.**
 
 ```bash
-python src/02_train_adapters.py```
+python src/02_train_adapters.py
+```
 
 **Output: Trained adapter weights (.pth files) for all 15 categories are ensured to be in models/adapters/.**
 ### **Step 3 — Evaluate the Final ASTF-AD System**
