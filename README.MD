@@ -120,7 +120,7 @@ python src/02_train_adapters.py
 ```
 **Output:** Trained adapter weights (.pth files) for all 15 categories are ensured to be in models/adapters/.
 
-### **Step 3 — Evaluate the Final ASTF-AD System**
+###**Step 3 — Evaluate the Final ASTF-AD System**
 **This is the main evaluation script. It applies our "Expert Selection Strategy" for each category and compares the final performance against the baseline.**
 
 ```bash
