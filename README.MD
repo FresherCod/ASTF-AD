@@ -97,7 +97,7 @@ ASTF-AD/
 
 The experiments are organized sequentially. To reproduce our findings, please run the following scripts in order.
 
-### **Step 1 — Generate & Summarize Baseline Results**
+**Step 1 — Generate & Summarize Baseline Results**
 
 *   **Option A — (Full Run) Train PatchCore from scratch:**  
     *This will train PatchCore for all 15 categories. This is a very time-consuming step.*
@@ -112,7 +112,7 @@ The experiments are organized sequentially. To reproduce our findings, please ru
     ```
 **Output:** A summary file `results/patchcore_baseline_summary.csv` is generated.
 
-### **Step 2 — Train Adapter Modules**
+**Step 2 — Train Adapter Modules**
 This script checks for existing adapter weights in `models/adapters/` and only trains the missing ones. If you downloaded our models, this step will be skipped automatically.
 
 ```bash
@@ -126,7 +126,7 @@ This is the main evaluation script. It applies our "Expert Selection Strategy" f
 python src/03_evaluate_system.py```
 Output: The comprehensive comparison table is printed to the console and saved to results/final_benchmark_comparison.csv.
 
-### **Step 4 — Generate Visual Comparisons (Optional)**
+**Step 4 — Generate Visual Comparisons (Optional)**
 To generate visual comparisons for specific images:
 Open src/04_generate_visuals.py.
 Edit the images_to_visualize dictionary inside the script to select your target images.
