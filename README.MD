@@ -79,19 +79,18 @@ Due to their large size, the dataset and pre-trained models are hosted externall
         **[https://www.mvtec.com/company/research/datasets/mvtec-ad](https://www.mvtec.com/company/research/datasets/mvtec-ad)**
     2.  Extract the archive and place its contents into the `data/mvtec_ad/` directory.
 
-After these steps, your project directory should look like this:
-**` ``` `**
-**`ASTF-AD/`**
-**`├── data/`**
-**`│   └── mvtec_ad/`**
-**`├── models/`**
-**`│   ├── patchcore/`**
-**`│   └── adapters/`**
-**`├── src/`**
-**`├── results/`**
-**`├── README.md`**
-**`└── ...`**
-**` ``` `**
+``` After these steps, your project directory should look like this:
+ASTF-AD/
+├── data/
+│ └── mvtec_ad/
+├── models/
+│ ├── patchcore/
+│ └── adapters/
+├── src/
+├── results/
+├── README.md
+└── ...
+```
 
 
 ## 📈 Reproduction Guide
