@@ -118,24 +118,25 @@ The experiments are organized sequentially. To reproduce our findings, please ru
 ```bash
 python src/02_train_adapters.py
 ```
+**Output:** Trained adapter weights (.pth files) for all 15 categories are ensured to be in models/adapters/.
 
-**Output: Trained adapter weights (.pth files) for all 15 categories are ensured to be in models/adapters/.**
 ### **Step 3 — Evaluate the Final ASTF-AD System**
-This is the main evaluation script. It applies our "Expert Selection Strategy" for each category and compares the final performance against the baseline.
+**This is the main evaluation script. It applies our "Expert Selection Strategy" for each category and compares the final performance against the baseline.**
 
 ```bash
-python src/03_evaluate_system.py```
-Output: The comprehensive comparison table is printed to the console and saved to results/final_benchmark_comparison.csv.
+python src/03_evaluate_system.py
+```
+**Output:** The comprehensive comparison table is printed to the console and saved to results/final_benchmark_comparison.csv.
 
-**Step 4 — Generate Visual Comparisons (Optional)**
-To generate visual comparisons for specific images:
-Open src/04_generate_visuals.py.
-Edit the images_to_visualize dictionary inside the script to select your target images.
-Run the script:
+##**Step 4 — Generate Visual Comparisons (Optional)**
+**To generate visual comparisons for specific images:**
+*Open src/04_generate_visuals.py.*
+**Edit the images_to_visualize dictionary inside the script to select your target images.**
+*Run the script:*
 ``` bash
 python src/04_generate_visuals.py
 ```
-Output: Comparison images will be saved in results/visuals/.
+**Output:** Comparison images will be saved in results/visuals/.
 
 ## 📊 Key Results
 Category	Applied Strategy	Image AUROC (ASTF-AD)	Baseline Image AUROC	Pixel AUROC (ASTF-AD)	Baseline Pixel AUROC
