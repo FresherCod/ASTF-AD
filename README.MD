@@ -88,9 +88,7 @@ ASTF-AD/
 │ └── adapters/
 ├── src/
 └── ...
-code
-Code
----
+
 
 ## 📈 Reproduction Guide
 
